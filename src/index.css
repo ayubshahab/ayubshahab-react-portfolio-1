@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*---------------------------- begin general styling----------------- */
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* giving a container rounded corners */
+.br-radius-normal{
+  border-radius: 10px;
+}
+
+.max-h-inherit{
+  max-height: inherit;
+}
+
+.h-inherit{
+  height: inherit;
+}
+
+.min-h-inherit{
+  min-height: inherit;
+}
+
+
+/*---------------------------- end general styling----------------- */
+
+/*---------------------------- begin navbar section----------------- */
+
+/* animation for mobile view to rise */
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/*---------------------------- end navbar section----------------- */
+
+
+/*---------------------------- begin hero section----------------- */
+
+/* giving a container a background of a light gradient */
+/* intro text on the hero section | desktop*/
+.background-light-gradient{
+  background: linear-gradient(121.62deg, rgba(75, 65, 65, 0.05) 23.92%, rgba(75, 65, 65, 0.15) 85.42%);
+}
+
+/* intro text mobile view calculating width */
+.calc-width{
+  width: calc(100% - 50px);
+}
+
+
+/*---------------------------- end hero section----------------- */
+
+
+/*---------------------------- about me section----------------- */
+
+.education-background{
+  background: linear-gradient(107.45deg, rgba(255, 255, 255, 0.05) 25.39%, rgba(255, 255, 255, 0.2) 91.7%), linear-gradient(0deg, rgba(75, 65, 65, 0.75), rgba(75, 65, 65, 0.75)), #FFFFFF;
+}
+
+/*---------------------------- End about me section----------------- */
+
+
+/*---------------------------- capabilities section----------------- */
+
+.carousel{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  gap:10px;
+}
+
+.control-dots{
+  position: relative !important
+}
+
+.control-dots .dot{
+  width:10px !important;
+  height:10px !important;
+  background-color: white;
+  border:1px solid white;
+}
+
+.control-dots .dot.selected{
+  background:white;
+}
+
+
+/*---------------------------- End capabilities section----------------- */
+
+/*---------------------------- Start skills section----------------- */
+
+.skills-gradient{
+  background: linear-gradient(99.62deg, rgba(255, 255, 255, 0.05) 18.75%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(0deg, rgba(75, 65, 65, 0.5), rgba(75, 65, 65, 0.5)), #FFFFFF;
+}
+
+.smooth-dropdown{
+  transition:max-height .5s;
+  overflow: hidden;
+}
+
+.closed-container{
+  max-height: 0px;
+  transition:max-height .25s;
+}
+
+.open-container{
+  max-height: 1200px;
+  transition: max-height .50s ease-in-out;
+}
+
+/*---------------------------- End skills section----------------- */
+
+
+
+
+
+
+/* giving a container a background of a brown gradient */
+.background-brown-gradient{
+  background: linear-gradient(107.45deg, rgba(255, 255, 255, 0.05) 25.39%, rgba(255, 255, 255, 0.2) 91.7%), rgba(75, 65, 65, 0.75);
+}
+
+
+/* intro text on the hero section, but for mobile */
+.background-light-gradient-mobile{
+  background: transparent
+}
+
+/* on the hero section, fades out the personal image, its a film applied on the entire container */
+.image-background-gradient{
+  background:linear-gradient(0deg, #4b4141, rgba(255, 255, 255, 0.51));
+}
+
+/* current tech stack at the bottom of hero section, shows up on mobile */
+.tech-stack-mobile{
+  background: rgba(75, 65, 65, 0.1);
+}

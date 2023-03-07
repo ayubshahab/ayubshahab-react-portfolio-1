@@ -1,0 +1,94 @@
+import React, {useState, useEffect } from 'react';
+import styles, {layout} from '../style';
+import {backgroundImage} from "../assets";
+
+const hero = () => (
+// px-[40px] md:px-[20px] justify-between items-center shadow-normal rounded-[25px]
+<section id="home" className="overflow-hidden h-screen max-h-[800px] min-h-[800px] flex items-center justify-center ">
+
+    {/* this contains the picture/background */}
+    <div className={`${layout.section} max-w-[1400px] relative w-full h-inherit max-h-inherit min-h-inherit w-full
+        bg-primary`}>
+        {/* hero section container */}
+
+        {/* intro text for hero section */}
+        <div className="flex flex-col absolute z-[2] gap-[15px] transition-bottom duration-500 px-[20px] py-[20px] shadow-normal br-radius-normal background-light-gradient right-[50px] bottom-[50%] ssmin:w-fit ss:mx-[25px] calc-width ss:left-0 ss:bottom-[210px] ss:bg-gradient-to-b
+          ">
+            {/* ss:bg-gradient-to-b */}
+            <h1 className=" w-[350px] font-bold text-[22px] text-center ss:w-full  xsmin:text-[26px] ssmin:text-[32px]">
+                Full Stack Developer and UI Designer</h1>
+            <p className="w-[350px] leading-[20px] ss:w-full xs:text-[14px]">I am an experienced full-stack software
+                developer with a diverse skillset that spans from web development to mobile development</p>
+            <div className="flex flex-row items-center justify-center w-full gap-[30px] ss:w-fit ">
+                <a href=""
+                    className="px-[10px] py-[10px] bg-accent w-fit text-primary br-radius-normal xs:text-[12px]">Contact
+                    Me</a>
+                <span className="flex flex-row items-center justify-center w-fit gap-[10px]">
+                    <i className="fa-solid fa-envelope"></i>
+                    <p className="xs:text-[12px]">Download CV</p>
+                </span>
+            </div>
+        </div>
+
+        {/* current tech stack */}
+        <div className="
+          flex flex-col w-max absolute z-[2] left-[40%] gap-[5px] transition-bottom duration-500
+          left-[55%] lgmin:left-[40%] bottom-[0px] smmin:bottom-[20px] mdmin:bottom-[40px] lgmin:bottom-[50px]
+          sm:opacity-100 sm:px-[25px] sm:py-[20px] sm:w-full sm:left-0 sm:bg-[#ecebeb]
+          ">
+            <h4 className="sm:text-center">Current Tech Stack</h4>
+            <div className="flex flex-row gap-[10px] justify-evenly items-center">
+                <i className="devicon-typescript-plain  text-[24px]"></i>
+                <i className="devicon-react-original text-[24px]"></i>
+                <i className="devicon-tailwindcss-plain text-[24px]"></i>
+                <i className="devicon-nodejs-plain text-[24px]"></i>
+                <i className="devicon-figma-plain text-[24px]"></i>
+            </div>
+        </div>
+
+        {/* hello statement */}
+        <div className="flex flex-col absolute z-[2] gap-[5px]
+          w-fit transition-left duration-500
+          left-[30px] bottom-[65%]
+          xsmin:left-[70%] xsmin:bottom-[65%]
+          ssmin:left-[55%] ssmin:bottom-[20%]
+          mdmin:left-[40%] mdmin:bottom-[20%]
+          lgmin:left-[40%] lgmin:bottom-[40%]
+          ">
+            <p className="text-[24px] text-accent font-bold xsmin:text-right smmin:text-left">Hi, I am</p>
+
+            <div className="flex flex-col gap-[10px] xsmin:items-end smmin:items-start ">
+                <span className="text-[60px] font-bold xsmin:text-right sm:text-[45px]">Ayub</span>
+                <span className="h-[5px] w-[50px] bg-accent"></span>
+            </div>
+
+            <div className="flex flex-row gap-[10px] mt-[20px] w-auto xsmin:justify-end smmin:justify-start">
+                <i className="fa-brands fa-linkedin text-[24px]"></i>
+                <i className="fa-brands fa-github text-[24px]"></i>
+            </div>
+        </div>
+
+        {/* scroll down */}
+        <a className="
+          bg-[#4B4141] flex flex-row w-max absolute z-[2] right-[-25px] transition-bottom duration-500
+          bottom-[140px] smmin:bottom-[80px] mdmin:bottom-[100px] lgmin:bottom-[110px] rotate-90 gap-[10px]
+          px-[10px] py-[5px] smmin:right-[0px] cursor-pointer
+          " href="#about">
+            <h4 className="text-primary">Scroll Down</h4>
+            <i
+                className="fa-solid text-primary fa-computer-mouse text-[20px] rotate-90 w-[33px] flex justify-center items-center"></i>
+        </a>
+
+        {/* for the background stuff - gradient */}
+        <div
+            className="w-full z-[1] h-inherit absolute max-h-inherit left-0 image-background-gradient ss:bg-pictureMobile">
+        </div>
+        {/* side profile image */}
+        <img src={backgroundImage} alt="personal image" className="absolute z-[0] left-[0px] smmin:left-[20px] mdmin:left-[40px] lgmin:left-[80px] max-h-[650px] bottom-0 h-full h-max-[600px] sm:bottom-[94px] object-cover transition-left duration-500
+          sm:scale-125 sm:object-left" />
+
+    </div>
+</section>
+)
+
+export default hero;
